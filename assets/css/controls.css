@@ -1,0 +1,260 @@
+/*
+    Buttons
+*/
+.btn {
+    appearance: none;
+    cursor: pointer;
+
+    height: 35px;
+    padding: 0 12px;
+    border-width: 0;
+    border-radius: 62px;
+    background-color: var(--blue-color);
+
+    font-family: var(--font-golos);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    color: var(--white-color);
+
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
+}
+
+.btn.outlined {
+    border-width: 1px;
+    color: var(--blue-color);
+    border-color: var(--blue-color);
+    background-color: transparent;
+}
+
+.btn.circle-btn {
+    padding: 0;
+    border-radius: 9999px;
+    background-color: var(--dark-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        width: 36px;
+        height: 36px;
+    }
+    @media (min-width: 1024px) {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.btn.circle-btn:hover {
+    background-color: var(--warning-color);
+}
+
+.btn.circle-btn:disabled {
+    background-color: var(--light-gray-color);
+}
+
+.btn.huge-btn {
+    width: 263px;
+    height: 72px;
+    max-height: 72px;
+    padding: 4px 49px;
+    border-width: 0;
+    border-radius: 66px;
+    border-color: var(--dark-extra-color);
+    background-color: var(--dark-extra-color);
+    line-height: 20.8px;
+
+    @media (max-width: 1024px) {
+        width: 100% !important;
+        height: 47px !important;
+        padding: 4px;
+    }
+}
+.btn.huge-btn br {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.btn.huge-btn:hover {
+    color: var(--dark-extra-color);
+    background-color: var(--warning-color);
+}
+
+.btn.huge-btn.outlined {
+    color: var(--dark-extra-color);
+
+    @media (max-width: 1024px) {
+        background-color: var(--white-color);
+    }
+    @media (min-width: 1024px) {
+        border-width: 2px;
+        background-color: transparent;
+    }
+}
+
+.btn.huge-btn.outlined:hover {
+    border-width: 0;
+    color: var(--white-color);
+    background-color: var(--dark-extra-color);
+}
+
+.btn .arrow-btn-icon {
+    @media (max-width: 1024px) {
+        width: 8px;
+        height: 16px;
+    }
+    @media (min-width: 1024px) {
+        width: 12px;
+        height: 20px;
+    }
+}
+
+.btn .arrow-btn-icon.left {
+    @media (max-width: 1024px) {
+        margin-right: 2px;
+    }
+    @media (min-width: 1024px) {
+        margin-right: 4px;
+    }
+}
+
+.btn .arrow-btn-icon.right {
+    @media (max-width: 1024px) {
+        margin-left: 2px;
+    }
+    @media (min-width: 1024px) {
+        margin-left: 4px;
+    }
+}
+
+/*
+    Marquee (Running line)
+*/
+.running-line {
+    width: 100%;
+    background-color: var(--danger-color);
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media (min-width: 1024px) {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+.running-line .line {
+    display: inline-block;
+    animation: running-line 20s linear infinite;
+}
+
+.running-line .wrap-line {
+    display: inline-block;
+    animation: running-wrap-line 20s linear infinite;
+    animation-delay: 10s;
+}
+
+@keyframes running-line {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes running-wrap-line {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+.running-line span {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 400;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 17.6px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 22px;
+        line-height: 24.2px;
+    }
+}
+
+.running-line span .delimiter {
+    min-width: 6px;
+    min-height: 6px;
+    background-color: var(--white-color);
+}
+
+/*
+    Carousel
+*/
+.carousel-dot {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    border-radius: 9999px;
+    background-color: var(--gray-alt-color);
+}
+
+.carousel-dot.active {
+    background-color: var(--dark-color);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.carousel-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+        gap: 16px;
+    }
+    @media (min-width: 1024px) {
+        gap: 14px;
+    }
+}
+
+.carousel-buttons .pages {
+    font-family: var(--font-golos);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: var(--dark-color);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+}
+
+.carousel-buttons .pages .total-pages {
+    opacity: 60%;
+}
+
+.carousel {
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: 0;
+    grid-template-rows: repeat(1, 1fr);
+    overflow: hidden;
+}

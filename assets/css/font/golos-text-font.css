@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+.golos-text-regular {
+     font-family: "Golos Text", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+}
+
+.golos-text-bold {
+     font-family: "Golos Text", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 700;
+     font-style: normal;
+ }
+
+.golos-text-black {
+     font-family: "Golos Text", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 900;
+     font-style: normal;
+}

@@ -1,0 +1,710 @@
+@import "controls.css";
+@import "font/golos-text-font.css";
+@import "font/merriweather-font.css";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white-color: white;
+    --dark-color: #313131;
+    --dark-extra-color: #1F1F1F;
+    --danger-color: #F54932;
+    --warning-color: #FBCE51;
+    --sand-color: #E9DED4;
+    --blue-color: #3057A2;
+    --light-gray-color: #D6D6D6;
+    --light-gray-alt-color: #D0D0D0;
+    --gray-alt-color: #D9D9D9;
+    --font-merryweather: "Merriweather", serif;
+    --font-golos: "Golos Text", sans-serif;
+    --x-container-mobile-padding: 19px;
+    --x-container-padding: 32px
+}
+
+/*
+    Header and Nav
+*/
+.container {
+    @media (max-width: 1024px) {
+        padding-left: var(--x-container-mobile-padding);
+        padding-right: var(--x-container-mobile-padding);
+    }
+    @media (min-width: 1024px) and (max-width: 1366px) {
+        padding-left: var(--x-container-padding);
+        padding-right: var(--x-container-padding);
+    }
+    @media (min-width: 1366px) {
+        max-width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
+
+.header {
+    background-repeat: no-repeat;
+    background-color: var(--sand-color);
+
+    @media (max-width: 450px) {
+        background-image: url(../images/header-background-mobile.png);
+        background-size: 100% 100%;
+
+        height: 774px;
+        max-height: 774px;
+    }
+    @media (min-width: 450px) {
+        background-image: url(../images/header-background.png);
+        background-size: cover;
+        background-position: center;
+
+        height: 700px;
+        max-height: 700px;
+    }
+}
+.header-logo {
+    @media (max-width: 1024px) {
+        width: 213px;
+        height: 32px;
+        margin-top: 18px;
+        margin-bottom: 40px;
+    }
+    @media (min-width: 1024px) {
+        width: 245px;
+        height: 36px;
+        margin-top: 26px;
+        margin-bottom: 58px;
+    }
+}
+.header-content {
+    @media (min-width: 450px) and (max-width: 1024px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 450px) {
+        max-width: 542px;
+    }
+}
+.header-content .headline {
+    font-family: var(--font-merryweather);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--dark-color);
+
+    @media (max-width: 578px) {
+        font-size: 36px;
+        line-height: 39.6px;
+    }
+    @media (min-width: 578px) {
+        font-size: 60px;
+        line-height: 66px;
+    }
+}
+.header-content .headline .first-line {
+    @media (min-width: 375px) {
+        text-align: left;
+    }
+    @media (min-width: 450px) and (max-width: 680px) {
+        display: inline;
+    }
+}
+.header-content .headline .first-line br {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.header-content .headline .second-line {
+    @media (min-width: 375px) {
+        text-align: center;
+    }
+    @media (min-width: 450px) and (max-width: 680px) {
+        display: inline;
+    }
+}
+.header-content .headline .third-line {
+    @media (min-width: 375px) {
+        text-align: right;
+    }
+    @media (min-width: 450px) and (max-width: 680px) {
+        display: inline;
+    }
+}
+.header-content .description {
+    margin-top: 24px;
+
+    font-family: var(--font-golos);
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+
+    @media (max-width: 1024px) {
+        text-align: left;
+    }
+    @media (min-width: 1024px) {
+        text-align: center;
+    }
+}
+.header-navigation {
+    display: flex;
+
+    @media (max-width: 1024px) {
+        margin-top: 32px;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 40px;
+        gap: 16px;
+    }
+}
+
+/*
+    Tournament section
+*/
+.tournament-section {
+    @media (max-width: 1024px) {
+        margin-top: 48px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 80px;
+    }
+}
+
+.tournament-section .tournament-block-title {
+    font-family: var(--font-merryweather);
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+        font-size: 28px;
+        line-height: 37.8px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 36px;
+        line-height: 48.6px;
+    }
+}
+.tournament-section .tournament-block-title .accent {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+.tournament-section .tournament-block-title .accent.accent-bold {
+    font-weight: 700;
+}
+
+.tournament-section .tournament-lecture-block {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+    }
+    @media (min-width: 1024px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.tournament-section .tournament-lecture-block .tournament-block-title {
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.tournament-section .tournament-lecture-block .tournament-block-title .first-item {
+    order: 1;
+}
+.tournament-section .tournament-lecture-block .tournament-block-title .second-item {
+    order: 2;
+}
+.tournament-section .tournament-lecture-block .tournament-block-title .third-item {
+    order: 3;
+}
+.tournament-section .tournament-lecture-block .tournament-block-title .fourth-item {
+    order: 4;
+}
+.tournament-section .tournament-lecture-block .tournament-block-title > img {
+    @media (max-width: 1024px) {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        order: 2;
+    }
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.tournament-section .tournament-lecture-block .many-players-image {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        width: 32.24%;
+        height: 20.46%;
+        margin-left: 64px;
+    }
+}
+
+.tournament-section .chess-session-block {
+    display: flex;
+
+    @media (max-width: 1024px) {
+        margin-top: 24px;
+        flex-wrap: wrap;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 17px;
+        flex-wrap: nowrap;
+        gap: 17px;
+    }
+}
+.tournament-section .chess-session-block .chess-player-container {
+    @media (max-width: 1024px) {
+        margin-left: calc(var(--x-container-mobile-padding) * -1);
+        margin-right: calc(var(--x-container-mobile-padding) * -1);
+    }
+    @media (min-width: 1024px) {
+        margin-left: -27px;
+        min-width: fit-content;
+        height: 44.58vw;
+        max-width: 528px;
+        max-height: 609px;
+    }
+}
+.tournament-section .chess-session-block .chess-player-container .chess-player-image {
+    @media (max-width: 450px) {
+        max-width: 100vw;
+        height: auto;
+    }
+    @media (min-width: 1024px) {
+        width: 100%;
+        height: 100%;
+    }
+}
+.tournament-section .chess-session-block .content {
+    @media (min-width: 1024px) {
+        margin-top: 47px;
+        margin-right: 27px;
+    }
+}
+
+.tournament-section .session-table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+
+    @media (max-width: 1024px) {
+        margin-top: 32px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 60px;
+    }
+}
+.tournament-section .session-table tr {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: var(--light-gray-alt-color);
+
+    @media (max-width: 1024px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+.tournament-section .session-table .tr:first-child {
+    @media (max-width: 1024px) {
+        padding-top: 0;
+    }
+}
+.tournament-section .session-table tr:last-child {
+    border-bottom-width: 0;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 0;
+    }
+}
+.tournament-section .session-table td {
+    @media (min-width: 1024px) {
+        padding: 16px 20px 16px 16px;
+    }
+}
+.tournament-section .session-table tr:first-child td {
+    padding-top: 0;
+}
+.tournament-section .session-table tr:last-child td {
+    padding-bottom: 0;
+}
+.tournament-section .session-table td:nth-of-type(odd) {
+    @media (min-width: 1024px) {
+        border-right-width: 2px;
+        border-right-style: solid;
+        border-color: var(--light-gray-alt-color);
+    }
+}
+.tournament-section .session-table td:first-child {
+    @media (min-width: 1024px) {
+        padding-left: 0;
+        white-space: nowrap;
+    }
+}
+.tournament-section .session-table td:last-child {
+    @media (min-width: 1024px) {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+.tournament-section .session-table .text {
+    font-family: var(--font-golos);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+.tournament-section .session-table .text-opacity {
+    @media (max-width: 1024px) {
+        opacity: 70%;
+    }
+}
+.tournament-section .session-table .text-accent {
+    font-weight: 600;
+}
+.tournament-section .session-table .text-crossed {
+    text-decoration: line-through var(--danger-color);
+}
+
+.tournament-section .info-text {
+    font-family: var(--font-golos);
+    color: var(--blue-color);
+
+    @media (max-width: 1024px) {
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 44px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.tournament-section .info-text br {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+/*
+    Stages
+*/
+.stages-section {
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        padding-top: 120px;
+    }
+    @media (min-width: 1024px) {
+        padding-top: 165px;
+        padding-bottom: 200px;
+    }
+}
+
+.stages-section .title-container {
+    max-width: 806px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.stages-section .title-container .huge-word {
+    font-family: var(--font-merryweather);
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 39.6px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 54px;
+        line-height: 64.8px;
+    }
+}
+
+.stages-section .title-container .subtitle {
+    font-family: var(--font-golos);
+    font-weight: 400;
+    color: var(--blue-color);
+
+    @media (max-width: 1024px) {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    @media (min-width: 1024px) {
+        max-width: 280px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.stages-section .stages-mobile {
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.stages-section .stages-mobile .stage-card {
+    margin-top: 148px;
+}
+
+.stages-section .stages-mobile .carousel-buttons {
+    max-width: fit-content;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stages-section .stages-desktop {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 54px;
+        display: grid;
+        grid-auto-rows: min-content;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+.stages-section .stage-card {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/card-background.png");
+    background-color: var(--sand-color);
+
+    padding: 20px;
+    position: relative;
+
+    font-family: var(--font-golos);
+    font-weight: 500;
+    color: var(--dark-color);
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+.stages-section .stage-card .stage-card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+.stages-section .stage-card .stage-card-container:first-child {
+    @media (max-width: 1024px) {
+        margin-top: 44px;
+    }
+}
+.stages-section .stage-card .stage-card-container:last-child {
+    @media (max-width: 1024px) {
+        margin-bottom: 20px;
+    }
+}
+.stages-section .stage-card .stage-card-container:nth-child(even) {
+    margin-top: 28px;
+}
+.stages-section .stage-card .index {
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+
+    background-color: var(--white-color);
+    border-radius: 9999px;
+    font-weight: 600;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stages-section .stages-mobile .stage-card.with-plane > img {
+    position: absolute;
+    width: 347px;
+    top: -134px;
+    left: 1%;
+    transform: rotate(-3deg);
+}
+.stages-section .stages-desktop .stage-card.vertical-expansion {
+    grid-row: span 2 / span 2
+}
+.stages-section .stages-desktop .stage-card.horizontal-expansion {
+    grid-column: span 2 / span 2
+}
+.stages-section .stages-desktop .stage-card.with-plane > div {
+    max-width: 54%;
+}
+.stages-section .stages-desktop .stage-card.with-plane > img {
+    position: absolute;
+    width: 402px;
+    top: -100px;
+    right: -67px;
+}
+
+/*
+    Tournament section players
+*/
+.tournament-players-section {
+    @media (max-width: 1024px) {
+        margin-top: 120px;
+        padding-bottom: 100px;
+    }
+    @media (min-width: 1024px) {
+        padding-bottom: 120px;
+    }
+}
+
+.tournament-players-section .title-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.tournament-players-section .title-container .title {
+    font-family: var(--font-merryweather);
+    text-transform: uppercase;
+    color: var(--dark-color);
+
+    @media (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 39.6px;
+    }
+    @media (min-width: 1024px) {
+        font-size: 54px;
+        line-height: 64.8px;
+    }
+}
+
+.tournament-players-section .mobile-controls {
+    @media (max-width: 1024px) {
+        max-width: fit-content;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+.tournament-players-section .title-container .controls {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        margin-left: auto;
+    }
+}
+
+.tournament-players-section .carousel {
+    @media (max-width: 1024px) {
+        margin-top: 40px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 60px;
+    }
+}
+
+.tournament-players-section .carousel .player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tournament-players-section .carousel .player-card .player-photo-container {
+    border-radius: 9999px;
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/carousel-item-background.png");
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        width: 244px;
+        height: 244px;
+        max-width: 244px;
+        max-height: 244px;
+    }
+    @media (min-width: 1024px) {
+        width: 320px;
+        height: 320px;
+        max-width: 320px;
+        max-height: 320px;
+    }
+}
+
+.tournament-players-section .carousel .player-card .player-photo-container > img {
+    width: 93%;
+    height: calc(100% - 21px);
+}
+
+.tournament-players-section .carousel .player-card .player-info {
+    margin-top: 28px;
+    font-family: var(--font-golos);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tournament-players-section .carousel .player-card .player-info .name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+}
+
+.tournament-players-section .carousel .player-card .player-info .status {
+    opacity: 60%;
+}
+
+.tournament-players-section .carousel .player-card .about-btn {
+    margin-top: 20px;
+}
+/*
+    Footer
+*/
+.footer {
+    padding-top: 40px;
+    padding-bottom: 72px;
+    background-color: var(--sand-color);
+}
+
+.footer .content {
+    font-family: var(--font-golos);
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 400;
+    color: var(--dark-color);
+
+    @media (max-width: 1024px) {
+        opacity: 60%;
+    }
+}
